@@ -94,7 +94,7 @@ bot.command(['configuracion', 'conf', 'settings'], ({ replyWithMarkdown }) => {
   return replyWithMarkdown(
     'Configuración',
     Markup.keyboard(
-      ['🆗 Enviar análisis los viernes', '👨‍💻 Contactar con el desarrollador', '⭐️ Donar', backToCurrenciesText], // Row3 with 3 buttons
+      ['👨‍💻 Contactar con el desarrollador', '⭐️ Donar', backToCurrenciesText], // Row3 with 3 buttons
     ).extra(),
   );
 });
