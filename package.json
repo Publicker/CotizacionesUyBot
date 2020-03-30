@@ -1,0 +1,49 @@
+{
+  "name": "cotizaciones-uy-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "dev": "nodemon dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Publicker/CotizacionesUyTelegramBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Publicker/CotizacionesUyTelegramBot/issues"
+  },
+  "homepage": "https://github.com/Publicker/CotizacionesUyTelegramBot#readme",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.2",
+    "@types/node-cron": "^2.0.3",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.0.1",
+    "telegraf": "^3.36.0",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@tsed/logger": "^5.4.1",
+    "@types/cheerio": "^0.22.17",
+    "@types/mongoose": "^5.7.7",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6",
+    "node-cron": "^2.0.3",
+    "source-map-support": "^0.5.16"
+  }
+}

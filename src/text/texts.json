@@ -1,0 +1,8 @@
+{
+  "help": "Puedo ayudarte a que veas rápidamente la cotización de algunas monedas. Si queres ver más detalles siempre podes pasarte por la [página del BROU](https://www.brou.com.uy/cotizaciones).\n\n*Comandos disponibles:*\n\n/cotizaciones - Desplegará botones en tu teclado para elegir cuál moneda quieres saber\n/configuracion - Mostrará las configuariones del bot\n/help - Mostrará esta información de ayuda",
+  "developer": "Este bot fue desarrollado por *@publickerr*\n\nPodés contacarme por cualquiera de los siguientes medios:\n• E-Mail: public.maldonado@gmail.com\n• Telegram: @publickerr\n• Twitter: [@Publicker](https://twitter.com/Publicker/)\n\nTambién podes ver en qué otras cosas estoy trabajando, o incluso contribuir con este bot (sí, es Open Source!) a través de GitHub: [Publicker](https://github.com/Publicker/)",
+  "showCurrencyValue": "*:_1*\nCompra: :_2\nVenta: :_3",
+  "whichCurrency": "¿De cuál moneda querés ver el valor?",
+  "unknownCommand": "No estoy entendiendo qué querés hacer 🙄\n\nFijate usar el comando /help para saber las cosas que podes hacer",
+  "backToCurrencies": "🔙 Volver a las cotizaciones"
+}
