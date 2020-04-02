@@ -25,7 +25,7 @@ export class Dolar extends Currency {
 
 export class DolarBrou extends Currency {
   constructor() {
-    super(ECurrencies.USDBrou, {
+    super(ECurrencies.USDBROU, {
       buy:
         '#p_p_id_cotizacionfull_WAR_broutmfportlet_INSTANCE_otHfewh1klyS_ > div > div > div > table > tbody > tr:nth-child(2) > td:nth-child(3) > div > p',
       sell:

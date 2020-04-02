@@ -3,7 +3,7 @@ import cheerio from 'cheerio';
 
 export enum ECurrencies {
   USD = 'Dolar',
-  USDBrou = 'Dolar Ebrou',
+  USDBROU = 'Dolar Ebrou',
   EUR = 'Euro',
   ARG = 'Peso argentino',
   UYU = 'Peso uruguayo',

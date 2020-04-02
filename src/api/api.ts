@@ -3,6 +3,8 @@ import { ObjectID } from 'mongodb';
 import User, { IUser } from '../db/models/User';
 import Message, { IMessage } from '../db/models/Message';
 import Cotization, { ICotization } from '../db/models/Cotization';
+import { ECurrencies } from '../cotization/CurrencyModel';
+import { isNullOrUndefined } from 'util';
 // import { ECurrencies } from '../cotization/CurrencyModel';
 
 const app = express();
@@ -106,6 +108,7 @@ app.get('/api/cotization/', async (req, res) => {
   const wantHour = Boolean(req.query.wantHour);
   const wantWeek = Boolean(req.query.wantWeek);
   const wantMonth = Boolean(req.query.wantMonth);
+  const cotization: String = req.query.cotization;
 
   if (Boolean(date.getTime())) {
     let minDate: Date = new Date(date);
@@ -161,7 +164,29 @@ app.get('/api/cotization/', async (req, res) => {
       maxDate.setHours(23);
     }
 
-    const cotizations = await Cotization.find({ time: { $lte: maxDate, $gte: minDate } }).sort({ time: -1 });
+    let cotizationWanted;
+    if (cotization) {
+      Object.keys(ECurrencies).forEach(async (keyValue, index) => {
+        if (keyValue == cotization.toUpperCase()) {
+          cotizationWanted = Object.values(ECurrencies)[index];
+        }
+      });
+    }
+
+    let filters: any = {};
+
+    filters.time = {
+      $lte: maxDate,
+      $gte: minDate,
+    };
+
+    if (!isNullOrUndefined(cotizationWanted)) {
+      filters.currency = cotizationWanted;
+    }
+
+    const cotizations = await Cotization.find(filters).sort({
+      time: -1,
+    });
 
     res.status(200).json(cotizations);
   } else {

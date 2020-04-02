@@ -74,7 +74,7 @@ bot.hears(backToCurrenciesText, ({ replyWithMarkdown }) => {
   return replyWithMarkdown(
     whichCurrencyText,
     Markup.keyboard([
-      [ECurrencies.USD, ECurrencies.USDBrou],
+      [ECurrencies.USD, ECurrencies.USDBROU],
       [ECurrencies.EUR, ECurrencies.ARG],
     ]).extra(),
   );
@@ -84,7 +84,7 @@ bot.command(['cotizaciones', 'plata', 'cot'], ({ replyWithMarkdown }) => {
   return replyWithMarkdown(
     whichCurrencyText,
     Markup.keyboard([
-      [ECurrencies.USD, ECurrencies.USDBrou],
+      [ECurrencies.USD, ECurrencies.USDBROU],
       [ECurrencies.EUR, ECurrencies.ARG],
     ]).extra(),
   );
@@ -128,7 +128,7 @@ bot.hears(Object.values(ECurrencies), async ({ message, replyWithMarkdown }) => 
       values = await usd.getValue();
       break;
     }
-    case ECurrencies.USDBrou: {
+    case ECurrencies.USDBROU: {
       values = await usdBrou.getValue();
       break;
     }
