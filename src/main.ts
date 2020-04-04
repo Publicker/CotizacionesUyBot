@@ -23,10 +23,10 @@ $log.level = 'debug';
 $log.name = '@CotizacionesUyBot';
 
 // DB
-import { connectToDB } from './db/configurationOfDB';
+import { connectToDB } from './db';
 
 // Server
-import { app } from './api/api';
+import { app } from './api';
 import { startCronGetCurrencies } from './cron/cron';
 
 // Initialize variables of enviroment
@@ -107,7 +107,7 @@ bot.hears(['⭐️ Donar', 'Donar'], ({ replyWithMarkdown }) => {
 
 // When user wants to know information about the developer
 bot.hears(
-  ['👨‍💻 Contactar con el desarrollador', 'desarrollador', 'dev', 'kpo', 'best', 'tu creador', 'creador', 'info'],
+  ['👨‍💻 Contactar con el desarrollador', 'desarrollador', 'dev', 'kpo', 'best', 'tu creador', 'creador', 'info', 'father', 'goyoushin-sama'],
   async ({ replyWithMarkdown }) => {
     const extraReplyMessage: ExtraReplyMessage = {
       disable_web_page_preview: true,

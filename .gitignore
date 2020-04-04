@@ -1,4 +1,10 @@
-node_modules
+# Node stuff
+node_modules/
+/dist/
+
+# Local private files
 .env
-/dist
-package-lock.json
+
+# Miscellaneous
+.history/
+.vscode/
