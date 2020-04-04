@@ -1,9 +1,10 @@
+import { Request, Response } from 'express';
 import User, { IUser } from '../../db/models/User';
 import Message, { IMessage } from '../../db/models/Message';
 import { DEFAULT_MESSAGE_ERROR, DEFAULT_MESSAGE_ERROR_NO_USER, isValidMongooseId } from './../constants';
 
 export default () => ({
-  index: async (req: any, res: any) => {
+  index: async (req : Request<any>, res : Response<any>) => {
     try {
       const users = await User.find();
       res.status(200).json(users);
@@ -12,7 +13,7 @@ export default () => ({
     }
   },
 
-  getUser: async (req: any, res: any) => {
+  getUser: async (req : Request<any>, res : Response<any>) => {
     const { id } = req.params;
     try {
       let user: IUser | null;
@@ -31,7 +32,7 @@ export default () => ({
     }
   },
 
-  getUserMessages: async (req: any, res: any) => {
+  getUserMessages: async (req : Request<any>, res : Response<any>) => {
     const { id } = req.params;
     let { populate } = req.query;
     populate = Boolean(JSON.parse(populate));

@@ -1,11 +1,11 @@
-import { DEFAULT_MESSAGE_ERROR } from '../constants';
-import Cotization from '../../db/models/Cotization';
-import { ECurrencies } from '../../cotization/CurrencyModel';
+import { Request, Response } from 'express';
 import { isNullOrUndefined } from 'util';
-import {  } from 'express';
+import { ECurrencies } from '../../cotization/CurrencyModel';
+import Cotization from '../../db/models/Cotization';
+import { DEFAULT_MESSAGE_ERROR } from '../constants';
 
 export default () => ({
-  index: async (req : any, res : any) => {
+  index: async (req : Request<any>, res : Response<any>) => {
     const date: Date = new Date(req.query.date);
     const wantHour = Boolean(req.query.wantHour);
     const wantWeek = Boolean(req.query.wantWeek);
