@@ -2,7 +2,7 @@
   "name": "cotizaciones-uy-telegram-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "node dist/main.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "node dist/main.js",
     "build": "tsc",
@@ -16,9 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/Publicker/CotizacionesUyTelegramBot.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["Bot", "Telegram", "BROU", "Uruguay", "UY", "Currency", "Money", "Cotization"],
+  "author": "Publicker",
+  "license": "GNU GPLv3",
   "bugs": {
     "url": "https://github.com/Publicker/CotizacionesUyTelegramBot/issues"
   },
@@ -29,8 +29,8 @@
     "@types/node": "^13.9.2",
     "@types/node-cron": "^2.0.3",
     "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
     "prettier": "^2.0.1",
-    "telegraf": "^3.36.0",
     "tslint": "^6.1.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
@@ -44,6 +44,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.6",
     "node-cron": "^2.0.3",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.16",
+    "telegraf": "^3.36.0"
   }
 }

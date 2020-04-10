@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "watch": true,
     "resolveJsonModule": true,
     "module": "commonjs",
     "outDir": "dist",
