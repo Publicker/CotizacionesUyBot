@@ -39,7 +39,7 @@
     "@tsed/logger": "^5.4.1",
     "@types/cheerio": "^0.22.17",
     "@types/mongoose": "^5.7.7",
-    "axios": "^0.21.2",
+    "axios": "^0.28.0",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.21.1",
     "mongoose": "^5.13.15",
