@@ -41,7 +41,7 @@
     "@types/mongoose": "^5.7.7",
     "axios": "^0.28.0",
     "cheerio": "^1.0.0-rc.12",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "mongoose": "^8.8.3",
     "node-cron": "^2.0.3",
     "source-map-support": "^0.5.16"
